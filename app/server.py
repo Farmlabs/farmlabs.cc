@@ -146,7 +146,7 @@ def api_license_delete(id):
 #
 
 @bt.get('/static/<filepath:path>')
-def static(filename):
+def static(filepath):
     return bt.static_file(filepath, root=STATIC_PATH)
 
 #
