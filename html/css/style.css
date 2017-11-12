@@ -1,0 +1,154 @@
+
+body {
+  font-size: 1.4em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  color: #222; }
+
+h1 {font-family: 'Questrial', sans-serif;
+    font-size: 3em;
+    text-transform: uppercase;}
+
+
+
+
+
+
+
+.container {
+    max-width: 100%;
+}
+.header {
+    margin-top: 6rem;
+    text-align: center;
+}
+
+.navbar {
+    display: none;
+}
+@media (min-width: 550px) {
+
+}
+@media (min-width: 750px) {
+.navbar{
+    border-top-width: 0;
+}
+.navbar, .navbar-spacer {
+    background: #fff none repeat scroll 0 0;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    display: block;
+    height: 6.5rem;
+    width: 100%;
+    z-index: 99;
+}
+.navbar-spacer {
+    display: none;
+}
+.navbar > .container {
+    width: 100%;
+}
+.navbar-list {
+    list-style: outside none none;
+    margin-bottom: 0;
+}
+.navbar-item {
+    float: right;
+    margin-bottom: 0;
+    position: relative;
+}
+.navbar-link {
+    color: #222;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    line-height: 6.5rem;
+    margin-right: 35px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.navbar-link.active {
+    color: #33c3f0;
+}
+.has-docked-nav .navbar {
+    left: 0;
+    position: fixed;
+    top: 0;
+}
+.has-docked-nav .navbar-spacer {
+    display: block;
+}
+.has-docked-nav .navbar > .container {
+    width: 80%;
+}
+.popover.open {
+    display: block;
+}
+.popover {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    display: none;
+    filter: drop-shadow(0px 0 6px rgba(0, 0, 0, 0.1));
+    left: -50%;
+    position: absolute;
+    top: 92%;
+}
+.popover-item:first-child .popover-link::after, .popover-item:first-child .popover-link::before {
+    border: medium solid transparent;
+    bottom: 100%;
+    content: " ";
+    height: 0;
+    left: 50%;
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+}
+.popover-item:first-child .popover-link::after {
+    border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) #fff;
+    border-width: 10px;
+    margin-left: -10px;
+}
+.popover-item:first-child .popover-link::before {
+    border-color: rgba(238, 238, 238, 0) rgba(238, 238, 238, 0) #eee;
+    border-width: 11px;
+    margin-left: -11px;
+}
+.popover-list {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.popover-item {
+    margin: 0;
+    padding: 0;
+}
+.popover-link {
+    border-bottom: 1px solid #eee;
+    color: #222;
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    padding: 8px 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.popover-item:first-child .popover-link {
+    border-radius: 4px 4px 0 0;
+}
+.popover-item:last-child .popover-link {
+    border-bottom-width: 0;
+    border-radius: 0 0 4px 4px;
+}
+.popover-link:hover {
+    background: #33c3f0 none repeat scroll 0 0;
+    color: #fff;
+}
+.popover-link:hover, .popover-item:first-child .popover-link:hover::after {
+    border-bottom-color: #33c3f0;
+}
+}
