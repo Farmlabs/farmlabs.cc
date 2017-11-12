@@ -1,0 +1,4 @@
+bottle==0.12.13
+Jinja2==2.10
+MarkupSafe==1.0
+peewee==2.10.2
