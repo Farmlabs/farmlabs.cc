@@ -13,11 +13,34 @@ h1 {font-family: 'Questrial', sans-serif;
 
 
 
+.imgChallenges {
+
+width: 100%;
+
+
+}
+
+.imgExperiments {
+width: 100%;
+
+
+}
+
+.imgResources {
+
+width: 100%;
+
+}
+
+
+
+
 
 
 
 .container {
     max-width: 100%;
+
 }
 .header {
     margin-top: 6rem;
@@ -31,6 +54,8 @@ h1 {font-family: 'Questrial', sans-serif;
 
 }
 @media (min-width: 750px) {
+
+
 .navbar{
     border-top-width: 0;
 }
