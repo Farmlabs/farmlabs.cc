@@ -1,0 +1,137 @@
+<html>
+  <head>
+    <title>Farmlabs.cc Quick and Dirty Resource Contrib form</title>
+  </head>
+  <body>
+    <main>
+      <form id="resource_form">
+        <h1>Add a New Resource</h1>
+        <p class="status"></p>
+        <fieldset>
+          <div>
+            <label for="resource_name">Name:</label><br>
+            <input name="name" type="text" size="50" id="resource_name" required>
+          </div>
+          <div>
+            <label for="resource_type">Type:</label>
+            <select name="type" id="resource_type" required></select>
+            &nbsp;
+            <label for="resource_license">License:</label>
+            <select name="license" id="resource_license" required></select>
+          </div>
+          <div>
+            <label for="resource_description">Description:</label><br>
+            <textarea name="description" id="resource_description" rows="15" cols="60" required></textarea>
+          </div>
+        </fieldset>
+        <button>Submit</button>
+      </form>
+      <hr>
+      <form id="type_form">
+        <h1>Add a New Resource Type</h1>
+        <p class="status"></p>
+        <fieldset>
+          <label for="type_name">Name:</label>
+          <input name="name" id="type_name" type="text" size="50" required>
+        </fieldset>
+        <button>Submit</button>
+      </form>
+      <hr>  
+      <form id="license_form">
+        <h1>Add a New License Type</h1>
+        <p class="status"></p>
+        <fieldset>
+          <div>
+            <label for="license_name">Name:</label>
+            <input name="name" id="license_name" type="text" size="50" required>
+          </div>
+          <div>
+            <label for="license_url">URL:</label>
+            <input name="url" id="license_url" type="url" size="50" required>
+          </div>
+        </fieldset>
+        <button>Submit</button>
+      </form>
+    </main>
+  </body>
+  <script>
+
+    // fetch license options
+    fetch('/api/licenses').then (function (response) {
+      return response.json();
+    }).then (function(json) {
+      let select = document.getElementById('resource_license');
+      for (let license of json.data) {
+        option = new Option(license.name, license.id);
+        select.add(option);
+      }
+    });
+    
+    // fetch resource types
+    fetch('/api/rtypes').then(function(response) {
+      return response.json();
+    }).then (function(json) {
+      let select = document.getElementById('resource_type');
+      for (let rtype of json.data) {
+        option = new Option(rtype.name, rtype.id);
+        select.add(option);
+      }
+    })
+    
+    // attach submit button callbacks
+    document.querySelector ('#resource_form button').onclick = function(ev) {
+      ev.preventDefault();
+      let resource_form = new FormData(document.getElementById('resource_form'));
+      let resource_data = JSON.stringify({
+        name: resource_form.get('name'),
+        type: resource_form.get('type'),
+        license: resource_form.get('license'),
+        description: resource_form.get('description')
+      });
+      fetch('/api/resources', {
+        method: 'POST',
+        headers: new Headers ({'Content-Type': 'application/json'}),
+        body: resource_data
+      }).then (function (response) {
+          return response.json();
+      }).then (function (json) {
+        document.querySelector('#resource_form .status').innerText = "New Resource ID: " + json.data.id;
+      });
+    }
+    
+    document.querySelector ('#type_form button').onclick = function(ev) {
+      ev.preventDefault();
+      let type_form = new FormData(document.getElementById('type_form'));
+      let type_data = JSON.stringify({
+        name: type_form.get('name')
+      });
+      fetch('/api/rtypes', {
+        method: 'POST',
+        headers: new Headers({'Content-Type': 'application/json'}),
+        body: type_data
+      }).then (function (response) {
+        return response.json();
+      }).then (function (json) {
+        document.querySelector('#type_form .status').innerText = "New Resource Type ID: " + json.data.id;
+      });
+    }
+
+    document.querySelector ('#license_form button').onclick = function(ev) {
+      ev.preventDefault();
+      let license_form = new FormData(document.getElementById('license_form')); 
+      let license_data = JSON.stringify({
+        name: license_form.get('name'),
+        url: license_form.get('url')
+      });
+      fetch('/api/licenses', {
+        method: 'POST',
+        headers: new Headers({'Content-Type': 'application/json'}),
+        body: license_data
+      }).then (function (response) {
+        return response.json();
+      }).then (function (json) {
+        document.querySelector('#license_form .status').innerText = "New License ID: " + json.data.id;
+      });
+    }
+  </script>
+</html>

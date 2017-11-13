@@ -48,13 +48,13 @@ def resource_index():
 # Resource CRUD
 #
 
-@bt.get('/api/resources/')
+@bt.get('/api/resources')
 def api_resource_index():
     resources = OkResource.select()
     result = [model_to_dict(r) for r in resources]
     return { 'data': result }
 
-@bt.post('/api/resources/')
+@bt.post('/api/resources')
 def api_resource_create():
     data = bt.request.json
     new_resource = OkResource(**data)
@@ -75,6 +75,38 @@ def api_resource_update(id):
 def api_resource_delete(id):
     resource = OkResource.get(OkResource.id == id)
     resource.delete_instance()
+
+#
+# Resource Types CRUD
+#
+
+@bt.get('/api/rtypes')
+def api_rtype_index():
+    rtypes = OkResourceType.select()
+    result = [model_to_dict(r) for r in rtypes]
+    return { 'data': result }
+
+@bt.post('/api/rtypes')
+def api_rtype_add():
+    data = bt.request.json
+    new_rtype = OkResourceType(**data)
+    new_rtype.save()
+    return { 'data': { 'id': new_rtype.id } }
+
+@bt.get('/api/rtypes/<id>')
+def api_rtype_get(id):
+    rtype = OkResourceType.get(OkResourceType.id == id)
+    return { 'data': model_to_dict(rtype) }
+
+@bt.put('/api/rtypes/<id>')
+def api_rtype_update(id):
+    data = bt.request.json
+    OkResourceType.update(**data).where(OkResourceType.id == id)
+
+@bt.delete('/api/rtypes/<id>')
+def api_rtype_delete(id):
+    rtype = OkResourceType.get(OkResourceType.id == id)
+    rtype.delete_instance()
 
 #
 # Media CRUD
