@@ -2,6 +2,11 @@
 
 ## Open Sessions (General Meeting and Discussion)
 
+### Gustavo Magalhães
+
+* looking at this ecossystem from a business model generation perspective
+* How will it relate to data and manage data
+
 ### Diogo Morais (Creative Commons PT)
 
 * the concept of multipliers (powerful stakeholders);
@@ -18,17 +23,17 @@
 * who is the repository for?
 * how to package the content for different groups?
 
- ### Hernani Dias
+ ### Hernani Dias (refarm the city)
 
 * The importance of bringing Scientific Validation Methods to the Equation
 * The importance of communities and the values be hound food production
 
-### João Afonso Henriques
+### João Afonso Henriques (biovivos.pt)
 
 * The business and rigorous investment
 * Participation yes! no extra costs.
 
-### Joana Soares
+### Joana Soares (Dona Horta)
 
 * Plagues, Climate Change against Industrial Traditional Practices
 * Resistance to change on local communities
