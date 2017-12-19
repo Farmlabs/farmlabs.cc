@@ -4,7 +4,7 @@
 
 ### Remote Contributions
 
-#### Gustavo Magalhães, Diogo Morais (Creative Commons PT), João Afonso Henriques ( biovivos.pt), Yoad David Luxembourg (DAR / Farm Labs), Hernani Dias (refarm the city), João Afonso Henriques (biovivos.pt), Joana Soares (Dona Horta)
+#### Gustavo Magalhães, Diogo Morais (Creative Commons PT), João Afonso Henriques ( biovivos.pt), Yoad David Luxembourg (DAR / Farm Labs), Hernani Dias (refarm the city), Joana Soares (Dona Horta)
 
 * looking at this ecossystem from a business model generation perspective
 * How will it relate to data and manage data
@@ -30,7 +30,7 @@
 * free-form documentation
 * content links (hypertext)
 * usually too chaotic (especially for novice users)
- 
+
 ### Dozuki
 
 * step by step documentation platform
@@ -83,7 +83,8 @@ Coops
 
 
 ### Data Model
-https://docs.google.com/spreadsheets/d/1dQRYaHwiaZeEd50jtiyathRS_gWHWroU8A9voK2xf0A/edit#gid=0 to test data model
+
+Go to https://goo.gl/forms/fdjSooL6hEoifaxz2 test data model (previous refs: https://docs.google.com/spreadsheets/d/1dQRYaHwiaZeEd50jtiyathRS_gWHWroU8A9voK2xf0A/edit#gid=0 )
 
 The Farmlabs Open Knowledge data model has the following data types: `Challenge`, `Experiment`, `Resource` and `Media`.
 
@@ -111,7 +112,7 @@ frontend at: https://github.com/Farmlabs/farmlabs.cc
 
 ## Closing Remarks
 
-This development session was aimed at defining what we've been assuming as a foundational tool - The Farmlabs Open Agriculture Knowledge Platform (FAOK). 
+This development session was aimed at defining what we've been assuming as a foundational tool - The Farmlabs Open Agriculture Knowledge Platform (FAOK).
 
 As a Farmlab will need its tools, its missions and its community we cannot not just assume that these will form out of a declaration of intentions.
 The FAOK is the enabler, it will have to help the community to set the premises and choose the set of resources that will be used, tested and developed in their own version of a Farm Lab.
@@ -126,7 +127,7 @@ This allowed us to augment the focus of this event by including remote participa
 * This Open Knowledge Platform cannot by definition solve all the problems that arise from this global intention of the network, nevertheless, it can act as a foundational agent and consequently be structured to start gathering knowledge that will, for example, help overcome the challenges imposed by a). In this sense the tool will have to be capable of gradually receiving more contributions from a less digital literate public which can perfectly mean the average educated farmer. In this sense it should motivate this participation.
 
 #### 2- Data Structure as the starting point:
-* A lot was discussed but one idea was stated more than once: 
+* A lot was discussed but one idea was stated more than once:
 * A professional Farmer will only engage on something that he trusts will help him find the solution for his problems, and he is far from being able to trust a solution that looks aimed at amateurs, or geeky solutions that he can't understand, even if we feel this is an unfair appreciation. Agriculture is an overwhelming activity, full of uncertainties and natural variables.
 * Our strategy proposal is based on the possibility of proving concepts. The team felt that the external participations were rich in challenges that we feel might be overcome by a structure such as a local commons managed Farmlab. In this sense, we divided the platform in three Knowledge Units: Challenges, Tools and Experiments. Farm Labs will use the Experiments to figure if the Open Tools are up for the Challenges of each community. The repository is just a documentation platform that will enable relations between this three stages of Agricultural Knowledge formation.
 
@@ -157,8 +158,6 @@ engage with "multipliers" (children and teenagers usually)
 [Alg-a Lab](http://www.lab.alg-a.org/en/)
 Refarm the City (http://refarmthecity.org)
 Algarve Farm Lab
-CoHabitat.net (https://cohabitat.net/) 
+CoHabitat.net (https://cohabitat.net/)
 ADXTUR (Aldeias do Xisto)
 FabLab de Penela / FarmLab
-
-
